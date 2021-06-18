@@ -94,6 +94,9 @@ Server running at http://localhost:5000/
 Press CTRL + C to stop the process.
 ```
 
+###Postman Collection File locally
+clothes_management.postman_collection.json
+
 ## License
 
 This project is open-sourced software licensed under the MIT License. See the LICENSE file for more information.
