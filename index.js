@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: 'application/*+json' }));
 
 // Body parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 //DB Config
 const db = require('./config/connect').mongoURI;
 
@@ -43,7 +43,7 @@ if(process.env.NODE_ENV === 'production'){
   });
 }
 
-const hostname = 'localhost';
+const hostname = '127.0.0.1';
 const port = process.env.PORT || 5000;
 // App listen on local 5000 port
 app.listen(port, () => {
