@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "1f5e698a-780a-4d35-a816-2ca4c5cdba79",
+		"name": "clothes_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "jack ma",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kack@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://clotheapi.herokuapp.com/api/users/register",
+					"protocol": "https",
+					"host": [
+						"clotheapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZTVjM2YwMTZiNzEyMTJlNDhhMzZkMCIsIm5hbWUiOiJuaWNrIG1pbmFqIiwiaWF0IjoxNjAxNjk0NDUxLCJleHAiOjE2MDQyODY0NTF9.IFWDm7noNZ4NEStcroMj_WcnvR88P23mgKJlrf6U2HQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Shatru Prakash",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "shatru@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://clotheapi.herokuapp.com/api/users/login",
+					"protocol": "https",
+					"host": [
+						"clotheapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete clothe item By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlZTVjM2YwMTZiNzEyMTJlNDhhMzZkMCIsIm5hbWUiOiJuaWNrIG1pbmFqIiwiaWF0IjoxNjAxNjk0NDUxLCJleHAiOjE2MDQyODY0NTF9.IFWDm7noNZ4NEStcroMj_WcnvR88P23mgKJlrf6U2HQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://clotheapi.herokuapp.com/api/posts/5f77f050573e05623f10054f",
+					"protocol": "https",
+					"host": [
+						"clotheapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"5f77f050573e05623f10054f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Clothe data by Title",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2EyMmMzODM0OWNiZGJmZDcwZThjZCIsIm5hbWUiOiJTaGF0cnUgUHJha2FzaCIsImlhdCI6MTYyMzg5NjAxMywiZXhwIjoxNjI2NDg4MDEzfQ.V0_j2aVDoDhVZOtqZXLlhX2qxv4tvvfQhyQL-RXteUQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://clotheapi.herokuapp.com/api/clothes/Rupa",
+					"protocol": "https",
+					"host": [
+						"clotheapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"clothes",
+						"Rupa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert and update clothes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwY2M2NDQ2ZDM3MzUyNWRmNWUxODMyNCIsIm5hbWUiOiJNYXlhbmsgc2hhcm1hIiwiaWF0IjoxNjI0MDA3Nzc4LCJleHAiOjE2MjY1OTk3Nzh9.EaZnXsX84x6Ujtc4LYdeowOgQHxLgGoE3ty2kV0oSHs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Nike",
+							"type": "text"
+						},
+						{
+							"key": "clotheType",
+							"value": "Trouser",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "block",
+							"type": "text"
+						},
+						{
+							"key": "createdBy",
+							"value": "shatru@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "sharedTo",
+							"value": "prakash@gmai.com",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/shatru/Pictures/Screenshot from 2021-06-17 09-02-39.png"
+						},
+						{
+							"key": "count",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://clotheapi.herokuapp.com/api/clothes",
+					"protocol": "https",
+					"host": [
+						"clotheapi",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"clothes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
